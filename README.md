@@ -4,7 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+
+
 `npm install react-scripts`
+
+Sometimes, Yarn can handle dependency conflicts more gracefully. If you have Yarn installed, try:
+### `yarn install`
 ### `yarn start`
 
 Runs the app in the development mode.<br />
