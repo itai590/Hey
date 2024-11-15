@@ -9,13 +9,17 @@ import { useDocument } from "react-firebase-hooks/firestore";
 import config from './firebase-config';
 import { useState, useEffect } from 'react';
 
-firebase.initializeApp(config);
+// Ensure Firebase is initialized only once
+if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+}
 
 export { firebase };
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
-export const messaging = firebase.messaging();
+export const messaging = process.env.NODE_ENV !== 'test' ? firebase.messaging() : null;
+
 
 export function getProjectID() {
     return config.projectId.replace("--", '-');

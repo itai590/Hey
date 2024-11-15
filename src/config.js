@@ -1,4 +1,4 @@
 export default {
-  customDomain: "hey-x.me",
+  customDomain: "hey-sheldon.me",
   mainPath: '/hubs'
 }
